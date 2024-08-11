@@ -1,52 +1,54 @@
 # Sunbase
 
-Overview
-Simple Customer Management CRUD application.
+# Overview #
+
+# Simple Customer Management CRUD application.
 --> Backend: Spring Boot (Java).
 --> Database: MySQL.
 --> Frontend: HTML/CSS/JavaScript.
 --> Authentication: Handled via JWT tokens.
 
-Features
-Customer Management:
+# Features
+
+# Customer Management:
 --> Create, Update, Delete, and View customer records.
 --> Pagination, sorting, and searching in the customer list.
 
-Authentication:
+# Authentication:
 --> JWT-based authentication for secure access to the APIs.
 
-Sync Feature:
+# Sync Feature:
 --> Sync customer data with a remote API, updating existing records or inserting new ones as needed.
 
-API Endpoints
+# API Endpoints
 Authentication:
 --> POST /api/login: Authenticates the user and returns a JWT token.
 
-Customer API:
+# Customer API:
 --> POST /api/customers: Create a new customer.
 --> PUT /api/customers/{id}: Update an existing customer.
 --> GET /api/customers: List customers with pagination, sorting, and searching.
 --> GET /api/customers/{id}: Get a customer by ID.
 --> DELETE /api/customers/{id}: Delete a customer.
 
-Sync API:
+# Sync API:
 --> POST /api/customers/sync: Sync customer data with the remote API.
 
-Technologies Used
+# Technologies Used
 --> Backend: Spring Boot, Java, JWT
 --> Database: MySQL
 --> Frontend: HTML, CSS, JavaScript
 --> Build Tool: Maven
 
-Setup and Installation
+# Setup and Installation
 Prerequisites
 --> Java 8 or higher
 --> Maven
 --> MySQL
 
-                  Steps to Run
+                  # Steps to Run #
 
---> Clone the Repository:
+--># Clone the Repository:
 
 --> git clone https://github.com/yourusername/customer-crud-app.git
 --> cd customer-crud-app
