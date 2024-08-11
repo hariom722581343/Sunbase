@@ -50,7 +50,7 @@ Prerequisites
 
 --># Clone the Repository:
 
---> git clone https://github.com/yourusername/customer-crud-app.git
+--> git clone [https://github.com/hariom722581343/sunbase](https://github.com/hariom722581343/Sunbase).git
 --> cd customer-crud-app
 --> Configure the Database:
 
