@@ -197,17 +197,14 @@ This project is a Customer CRUD application built with Spring Boot, JPA, and MyS
 ## Documents
 
 ### Add Customer
-- [Add Customer](https://github.com/hariom722581343/Sunbase/blob/main/sunbase/images/Add%20Customer.pdf)
 <img src="https://github.com/hariom722581343/Sunbase/blob/main/sunbase/images/Add%20Customer_page-0001.jpg" alt="Add Customer" width="300">
 
 ---
 
 ### Customer List
-- [Customer List](https://github.com/hariom722581343/Sunbase/blob/main/sunbase/images/Customer%20List.pdf)
 <img src="https://github.com/hariom722581343/Sunbase/blob/main/sunbase/images/Customer%20List_page-0001.jpg" alt="Customer List" width="300">
 
 ---
 
 ### Customer List 2
-- [Customer List 2](https://github.com/hariom722581343/Sunbase/blob/main/sunbase/images/Customer%20List2.pdf)
 <img src="https://github.com/hariom722581343/Sunbase/blob/main/sunbase/images/Customer%20List2_page-0001.jpg" alt="Customer List 2" width="300">
