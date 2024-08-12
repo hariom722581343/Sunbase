@@ -82,7 +82,8 @@ Prerequisites
  
 - [Customer List](https://github.com/hariom722581343/Sunbase/blob/main/sunbase/images/Customer%20List.pdf)
 
-- <img src="https://github.com/hariom722581343/Sunbase/blob/main/sunbase/images/Customer%20List.pdf" width="600" height="500"></img>
+<img src="https://github.com/hariom722581343/Sunbase/blob/main/sunbase/images/Customer%20List.pdf" alt="Description of the Image">
+
 
 
  
