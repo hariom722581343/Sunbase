@@ -1,76 +1,198 @@
 # Sunbase
+# Customer CRUD Application
 
+This project is a Customer CRUD application built with Spring Boot, JPA, and MySQL. It provides a RESTful API for managing customers, including creating, updating, fetching, and deleting customer records. Additionally, it includes JWT authentication for secure access and a sync feature to fetch customer data from a remote API.
 
-# Overview #
+## Features
 
-# Simple Customer Management CRUD application.
---> Backend: Spring Boot (Java).
---> Database: MySQL.
---> Frontend: HTML/CSS/JavaScript.
---> Authentication: Handled via JWT tokens.
+- **Create Customer**: Add a new customer.
+- **Update Customer**: Update an existing customer.
+- **Get Customer List**: Retrieve a list of customers with pagination, sorting, and search capabilities.
+- **Get Customer by ID**: Fetch a single customer by ID.
+- **Delete Customer**: Remove a customer from the database.
+- **JWT Authentication**: Secure the API endpoints using JWT.
+- **Sync Customers**: Fetch and sync customer data from a remote API.
 
-# Features
+## Technologies Used
 
-# Customer Management:
---> Create, Update, Delete, and View customer records.
---> Pagination, sorting, and searching in the customer list.
+- **Backend**: Spring Boot
+- **Database**: MySQL
+- **Authentication**: JWT (JSON Web Token)
+- **Frontend**: React, Redux, Charka UI
 
-# Authentication:
---> JWT-based authentication for secure access to the APIs.
+## Getting Started
 
-# Sync Feature:
---> Sync customer data with a remote API, updating existing records or inserting new ones as needed.
+### Prerequisites
 
-# API Endpoints
-Authentication:
---> POST /api/login: Authenticates the user and returns a JWT token.
+- Java 11 or higher
+- Maven
+- MySQL
 
-# Customer API:
---> POST /api/customers: Create a new customer.
---> PUT /api/customers/{id}: Update an existing customer.
---> GET /api/customers: List customers with pagination, sorting, and searching.
---> GET /api/customers/{id}: Get a customer by ID.
---> DELETE /api/customers/{id}: Delete a customer.
+### Setup Instructions
 
-# Sync API:
---> POST /api/customers/sync: Sync customer data with the remote API.
+1. **Clone the repository:**
 
-# Technologies Used
---> Backend: Spring Boot, Java, JWT
---> Database: MySQL
---> Frontend: HTML, CSS, JavaScript
---> Build Tool: Maven
+    ```sh
+    git clone https://github.com/hariom722581343/sunbase.git
+    cd customer-crud-app
+    ```
 
-# Setup and Installation
-Prerequisites
---> Java 8 or higher
---> Maven
---> MySQL
+2. **Configure MySQL Database:**
 
-                  # Steps to Run #
+    Create a MySQL database named `customer_db` (or any name of your choice) and update the `application.properties` file with your database details.
 
---># Clone the Repository:
+    ```properties
+    spring.datasource.url=jdbc:mysql://localhost:3306/customer_db
+    spring.datasource.username=root
+    spring.datasource.password=your_password
+    spring.jpa.hibernate.ddl-auto=update
+    spring.jpa.show-sql=true
+    spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver
+    ```
 
---> git clone [https://github.com/hariom722581343/sunbase](https://github.com/hariom722581343/Sunbase).git
---> cd customer-crud-app
---> Configure the Database:
+3. **Install dependencies and build the project:**
+- Backend
+    `
+    mvn clean install
+    `
+- frontend 
+ `
+    npm i
+    `
 
---> Update the database configuration in src/main/resources/application.properties:
---> spring.datasource.url=jdbc:mysql://localhost:3306/your_database
---> spring.datasource.username=your_username
---> spring.datasource.password=your_password
---> spring.jpa.hibernate.ddl-auto=update
---> security.jwt.token.secret-key=your_secret_key
---> Build the Project:
+4. **Run the application:**
+- Frist run tha Backen Server
+    `
+    mvn spring-boot:run
+    `
+- Frontend run the application
+  `
+    mvn spring-boot:run
+    `
 
---> mvn clean install
---> Run the Application:
+## API Endpoints
 
---> mvn spring-boot:run
---> Access the Application:
+### Authentication
 
---> Frontend: Visit http://localhost:8080/ in your browser.
---> API: Use tools like Postman to interact with the APIs.
+- **Login**: Obtain a JWT token.
+
+    ```http
+    POST /login
+    ```
+
+    **Request Body:**
+
+    ```json
+    {
+        "username": "your_username",
+        "password": "your_password"
+    }
+    ```
+
+### Customer CRUD Operations
+
+- **Create Customer**
+
+    ```http
+    POST /api/customers
+    ```
+
+    **Request Body:**
+
+    ```json
+    {
+        "firstName": "Jane",
+        "lastName": "Doe",
+        "street": "Elvnu Street",
+        "address": "H no 2",
+        "city": "Delhi",
+        "state": "Delhi",
+        "email": "sam@gmail.com",
+        "phone": "12345678"
+    }
+    ```
+
+- **Update Customer**
+
+    ```http
+    PUT /api/customers/{id}
+    ```
+
+    **Request Body:**
+
+    ```json
+    {
+        "firstName": "Jane",
+        "lastName": "Doe",
+        "street": "Elvnu Street",
+        "address": "H no 2",
+        "city": "Delhi",
+        "state": "Delhi",
+        "email": "sam@gmail.com",
+        "phone": "12345678"
+    }
+    ```
+
+- **Get Customer List** (with pagination, sorting, and search)
+
+    ```http
+    GET /api/customers/list
+    ```
+
+    **Query Parameters:**
+
+    - `firstName` (optional): Filter by first name
+    - `city` (optional): Filter by city
+    - `email` (optional): Filter by email
+    - `phone` (optional): Filter by phone
+    - `page` (default: 0): Page number
+    - `size` (default: 10): Page size
+    - `sortBy` (default: "id"): Field to sort by
+    - `sortDir` (default: "asc"): Sort direction (asc or desc)
+
+- **Get Customer by ID**
+
+    ```http
+    GET /api/customers/{id}
+    ```
+
+- **Delete Customer**
+
+    ```http
+    DELETE /api/customers/{id}
+    ```
+
+### Sync Customers
+
+- **Sync Customers**
+
+    ```http
+    POST /sync-customers
+    ```
+
+## Sync with Remote API
+
+1. **Authenticate with the Remote API:**
+
+    - Path: `https://qa.sunbasedata.com/sunbase/portal/api/assignment_auth.jsp`
+    - Method: POST
+    - Request Body:
+
+        ```json
+        {
+            "login_id": "test@sunbasedata.com",
+            "password": "Test@123"
+        }
+        ```
+
+    - Response: Bearer token
+
+2. **Fetch Customer List:**
+
+    - Path: `https://qa.sunbasedata.com/sunbase/portal/api/assignment.jsp`
+    - Method: GET
+    - Parameters: `cmd=get_customer_list`
+    - Header: `Authorization: Bearer token_received_in_authentication`
 
 ## Documents
 
