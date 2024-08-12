@@ -72,3 +72,12 @@ Prerequisites
 --> Frontend: Visit http://localhost:8080/ in your browser.
 --> API: Use tools like Postman to interact with the APIs.
 
+## Documents
+
+- [Add Customer](https://github.com/hariom722581343/Sunbase/blob/main/sunbase/images/Add%20Customer.pdf)
+
+ 
+- [Customer List](https://github.com/hariom722581343/Sunbase/blob/main/sunbase/images/Customer%20List.pdf)
+
+ 
+- [Customer List 2](https://github.com/hariom722581343/Sunbase/blob/main/sunbase/images/Customer%20List2.pdf)
