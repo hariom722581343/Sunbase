@@ -76,15 +76,15 @@ Prerequisites
 
 - [Add Customer](https://github.com/hariom722581343/Sunbase/blob/main/sunbase/images/Add%20Customer.pdf)
 
+<img src="(https://github.com/hariom722581343/Sunbase/blob/main/sunbase/images/Add%20Customer_page-0001.jpg)" alt="Add Customer">
 
 
  
 - [Customer List](https://github.com/hariom722581343/Sunbase/blob/main/sunbase/images/Customer%20List.pdf)
 
-
-
-
+<img src="(https://github.com/hariom722581343/Sunbase/blob/main/sunbase/images/Add%20Customer_page-0001.jpg)" alt="Customer List">
  
 - [Customer List 2](https://github.com/hariom722581343/Sunbase/blob/main/sunbase/images/Customer%20List2.pdf)
 
+<img src="(https://github.com/hariom722581343/Sunbase/blob/main/sunbase/images/Customer%20List2_page-0001.jpg)" alt="Customer List">
 
